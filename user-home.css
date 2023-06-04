@@ -1,0 +1,109 @@
+/* banner */
+.banner-title1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  padding-top: 70px;
+  color: black;
+  text-align: center;
+
+  margin-bottom: 0px;
+}
+.banner-title2,
+.banner-title3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+
+  color: black;
+  text-align: center;
+
+  margin-bottom: 0px;
+}
+.banner-title4 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+
+  color: grey;
+  text-align: center;
+}
+
+.banner-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.banner-btn:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+/* carousel */
+
+.carousel-item {
+  text-align: center;
+}
+
+.read-more {
+  padding: 10px;
+
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: start;
+  text-decoration: none;
+}
+.read-more:after {
+  content: '>>';
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 5px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+/* textfield */
+.textfield-div {
+  margin-top: 100px;
+}
+
+.form-control-underline {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+}
+
+.form-control-underline:focus {
+  box-shadow: none;
+  border-color: black;
+}
+.text-muted {
+  color: black !important;
+}
+input {
+  width: 80% !important;
+}

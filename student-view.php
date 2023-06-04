@@ -1,6 +1,5 @@
 <?php
-require 'dbcon.php';
-?>
+require 'dbcon.php'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -11,6 +10,8 @@ require 'dbcon.php';
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 
     <title>Student View</title>
 </head>
@@ -28,47 +29,47 @@ require 'dbcon.php';
                         </h4>
                     </div>
                     <div class="card-body">
-                        <?php
-                        if (isset($_GET['id'])) {
-                            $student_id = mysqli_real_escape_string($con, $_GET['id']);
+                        <?php if (isset($_GET['id'])) {
+                            $student_id = mysqli_real_escape_string(
+                                $con,
+                                $_GET['id']
+                            );
                             $query = "SELECT * FROM students WHERE id='$student_id' ";
                             $query_run = mysqli_query($con, $query);
 
                             if (mysqli_num_rows($query_run) > 0) {
-                                $student = mysqli_fetch_array($query_run);
-                                ?>
+                                $student = mysqli_fetch_array($query_run); ?>
 
                                 <div class="mb-3">
                                     <label>Student Name</label>
                                     <p class="form-control">
-                                        <?= $student['name']; ?>
+                                        <?= $student['name'] ?>
                                     </p>
                                 </div>
                                 <div class="mb-3">
                                     <label>Student Email</label>
                                     <p class="form-control">
-                                        <?= $student['email']; ?>
+                                        <?= $student['email'] ?>
                                     </p>
                                 </div>
                                 <div class="mb-3">
                                     <label>Student Phone</label>
                                     <p class="form-control">
-                                        <?= $student['phone']; ?>
+                                        <?= $student['phone'] ?>
                                     </p>
                                 </div>
                                 <div class="mb-3">
                                     <label>Student Course</label>
                                     <p class="form-control">
-                                        <?= $student['course']; ?>
+                                        <?= $student['course'] ?>
                                     </p>
                                 </div>
 
                                 <?php
                             } else {
-                                echo "<h4>No Such Id Found</h4>";
+                                echo '<h4>No Such Id Found</h4>';
                             }
-                        }
-                        ?>
+                        } ?>
                     </div>
                 </div>
             </div>
