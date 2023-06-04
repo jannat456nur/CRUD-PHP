@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($row["role"] == "user") {
             // Redirect to home.php for users
-            header("Location: home.php");
+            header("Location: user-home.php");
         } elseif ($row["role"] == "admin") {
             // Redirect to index.php for admin
-            header("Location: index.php");
+            header("Location: admin.php");
         }
     } else {
         // Invalid credentials
