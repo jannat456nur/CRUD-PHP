@@ -214,15 +214,11 @@
           <span class="text-muted ml-2 text">Subscribe</span>
         </div>
       </div>
+
+
     </div>
-     <!-- <div class="col-md-6 offset-md-3">
-      <div class="form-group">
-        <div class="d-flex align-items-center">
-          <input type="text" class="form-control form-control-underline" placeholder="Enter your text">
-          <span class="text-muted ml-2">Example</span>
-        </div>
-      </div>
-    </div> -->
+    
+    
 </div>
     
 

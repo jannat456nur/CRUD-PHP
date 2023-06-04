@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-         <!-- Font awesome kit -->
+       <!-- Font awesome kit -->
 
     <script
       src="https://kit.fontawesome.com/d5d25df65b.js"
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="products.css">
+      <link rel="stylesheet" href="details.css">
  <!-- bootstrap js -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -22,9 +22,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    } ?>
+
+
+<?php if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+} ?>
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-black text-white">
     
@@ -36,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="user-home.php">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active text-white" aria-current="page" href="products.php">Products</a>
@@ -61,66 +63,21 @@
         </div>
   
 </nav>
+ <div class="row details-div text-center">
+    <div class="col-md-12">
+      <h2>Shirts</h2>
+      <p>Price: $19.99</p>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla mattis dolor, vitae consequat velit lacinia ac. Sed nec dolor leo. Sed venenatis vel ex a malesuada.</p>
+      <button class="details-button">Add to Cart</button>
+    </div>
+  </div>
+  </div>
 
-    <div class="card-group mt-5 ">
-  <div class="card border-0 p-4">
-    <img src="./img/kids-380x270.jpg" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Kids</h5>
-      <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-  <div class="card border-0 p-4">
-    <img src="./img/pants.jpg" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Pants</h5>
-      <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-   <div class="card border-0 p-4">
-    <img src="./img/shirts.jpg" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Shirts</h5>
-      <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-  
-</div>
-<!-- onother row -->
-<div class="card-group mt-5">
-  
-  <div class="card border-0 mb-5 p-4">
-    <img src="./img/knits.jpg" class="card-img-top" alt="...">
-    <div class="card-body  ">
-      <h5 class="card-title">Knits</h5>
-      <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-  <div class="card border-0 mb-5 p-4">
-    <img src="./img/kids-380x270.jpg" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Kids</h5>
-      <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-   <div class="card border-0 mb-5 p-4">
-    <img src="./img/shirts.jpg" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <h5 class="card-title">Shirts</h5>
-       <h5 class="card-title text-secondary fs-4">5 item</h5>
-      <a class="details" href="details.php">Details</a>
-    </div>
-  </div>
-  
-</div>
+ 
 
-  </div>
-  <!-- start of footer -->
+
+
+ <!-- start of footer -->
 <footer class="footer bg-black text-light ">
   <div class="container ">
     <div class="row ">
