@@ -19,7 +19,7 @@ require 'dbcon.php';
 <body>
 
     <div class="container mt-4">
-        <?php include('header.php'); ?>
+        <?php include('admin-header.php'); ?>
         <?php include('message.php'); ?>
 
         <div class="row">
