@@ -9,6 +9,7 @@
 
   margin-bottom: 0px;
 }
+
 .banner-title2,
 .banner-title3 {
   font-size: 2.5rem;
@@ -20,6 +21,12 @@
 
   margin-bottom: 0px;
 }
+
+#carouselExampleCaptions .carousel-item img {
+  height: 85vh;
+  object-fit: cover;
+}
+
 .banner-title4 {
   font-size: 1rem;
   font-weight: 600;
@@ -45,6 +52,7 @@
   text-decoration: none;
   transition: 0.5s;
 }
+
 .banner-btn:hover {
   background-color: black;
   color: white;
@@ -66,6 +74,7 @@
   text-align: start;
   text-decoration: none;
 }
+
 .read-more:after {
   content: '>>';
   font-size: 1rem;
@@ -76,6 +85,7 @@
   text-decoration: none;
   transition: 0.5s;
 }
+
 .card-img-top {
   transition: transform 0.3s ease;
 }
@@ -101,9 +111,11 @@
   box-shadow: none;
   border-color: black;
 }
+
 .text-muted {
   color: black !important;
 }
+
 input {
   width: 80% !important;
 }
