@@ -18,11 +18,11 @@ require 'dbcon.php';
 
 <body>
 
-    <div class="container mt-4">
+    <div class="container">
         <?php include('admin-header.php'); ?>
         <?php include('message.php'); ?>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -49,7 +49,7 @@ require 'dbcon.php';
                                 $query_run = mysqli_query($con, $query);
 
                                 if (mysqli_num_rows($query_run) > 0) {
-                                    foreach ($query_run as $product) {
+                                    while ($product = mysqli_fetch_assoc($query_run)) {
                                         ?>
                                         <tr>
                                             <td>
@@ -62,16 +62,17 @@ require 'dbcon.php';
                                                 <?= $product['name']; ?>
                                             </td>
                                             <td>
-                                                <img src="<?= $product['image']; ?>" alt="Product Image" class="img-thumbnail"
-                                                    style="width: 100px;">
+                                                <?php if (!empty($product['img']) && file_exists($product['img'])) { ?>
+                                                    <img src="<?= $product['img']; ?>" alt="Product Image" class="img-thumbnail"
+                                                       >
+                                                <?php } else { ?>
+                                                    <span class="text-danger">Image Not Found</span>
+                                                <?php } ?>
                                             </td>
-                                            <td>
-                                                $
+                                            <td>$
                                                 <?= $product['price']; ?>
                                             </td>
                                             <td>
-                                                <a href="product-view.php?id=<?= $product['id']; ?>"
-                                                    class="btn btn-info btn-sm">View</a>
                                                 <a href="product-edit.php?id=<?= $product['id']; ?>"
                                                     class="btn btn-success btn-sm">Edit</a>
                                                 <form action="code.php" method="POST" class="d-inline">
@@ -83,7 +84,7 @@ require 'dbcon.php';
                                         <?php
                                     }
                                 } else {
-                                    echo "<h5> No Record Found </h5>";
+                                    echo "<h5>No Record Found</h5>";
                                 }
                                 ?>
 
