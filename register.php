@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($con, $query);
 
+    
     if (mysqli_num_rows($result) > 0) {
         // Email already exists
         echo "Email already exists.";
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($row["role"] == "user") {
             // Redirect to home.php for users
-            header("Location: user-home.php");
+            header("Location: index.php");
         } elseif ($row["role"] == "admin") {
             // Redirect to index.php for admin
             header("Location: admin.php");
