@@ -56,8 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 echo '<input type="hidden" name="user_id" value="' . $row['id'] . '">';
                 echo '<select name="new_role" class="form-select">';
                 echo '<option value="user">User</option>';
-                echo '<option value="admin">Admin</option>';
-                echo '</select>';
+                echo '<option value="admin">Admin</option></select>';
                 echo '<button type="submit" class="btn btn-primary">Update</button>';
                 echo '</form>';
                 echo '</td>';
