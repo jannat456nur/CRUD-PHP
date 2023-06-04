@@ -17,26 +17,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM users WHERE email = '$email'";
     $result = mysqli_query($con, $query);
 
-    
     if (mysqli_num_rows($result) > 0) {
         // Email already exists
         echo "Email already exists.";
     } else {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION["email"] = $row["email"];
-        $_SESSION["role"] = $row["role"];
+        $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
+        $insertResult = mysqli_query($con, $query);
 
-        if ($row["role"] == "user") {
-            // Redirect to home.php for users
+        if ($insertResult) {
+            // Registration successful
+            $_SESSION["email"] = $email;
+            $_SESSION["role"] = "user";
             header("Location: index.php");
-        } elseif ($row["role"] == "admin") {
-            // Redirect to index.php for admin
-            header("Location: admin.php");
+        } else {
+            // Registration failed
+            echo "Registration failed.";
         }
     }
 
     mysqli_close($con);
 }
+
 ?>
 
 
