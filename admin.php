@@ -13,7 +13,7 @@ require 'dbcon.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Student CRUD</title>
+    <title>Products CRUD</title>
 </head>
 
 <body>
@@ -26,8 +26,8 @@ require 'dbcon.php';
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student Details
-                            <a href="student-create.php" class="btn btn-primary float-end">Add Students</a>
+                        <h4>Product Details
+                            <a href="product-create.php" class="btn btn-primary float-end">Add Product</a>
                         </h4>
                     </div>
                     <div class="card-body">
@@ -36,44 +36,46 @@ require 'dbcon.php';
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Student Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Course</th>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Image</th>
+                                    <th>Price</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $query = "SELECT * FROM students";
+                                $query = "SELECT * FROM products";
                                 $query_run = mysqli_query($con, $query);
 
                                 if (mysqli_num_rows($query_run) > 0) {
-                                    foreach ($query_run as $student) {
+                                    foreach ($query_run as $product) {
                                         ?>
                                         <tr>
                                             <td>
-                                                <?= $student['id']; ?>
+                                                <?= $product['id']; ?>
                                             </td>
                                             <td>
-                                                <?= $student['name']; ?>
+                                                <?= $product['type']; ?>
                                             </td>
                                             <td>
-                                                <?= $student['email']; ?>
+                                                <?= $product['name']; ?>
                                             </td>
                                             <td>
-                                                <?= $student['phone']; ?>
+                                                <img src="<?= $product['image']; ?>" alt="Product Image" class="img-thumbnail"
+                                                    style="width: 100px;">
                                             </td>
                                             <td>
-                                                <?= $student['course']; ?>
+                                                $
+                                                <?= $product['price']; ?>
                                             </td>
                                             <td>
-                                                <a href="student-view.php?id=<?= $student['id']; ?>"
+                                                <a href="product-view.php?id=<?= $product['id']; ?>"
                                                     class="btn btn-info btn-sm">View</a>
-                                                <a href="student-edit.php?id=<?= $student['id']; ?>"
+                                                <a href="product-edit.php?id=<?= $product['id']; ?>"
                                                     class="btn btn-success btn-sm">Edit</a>
                                                 <form action="code.php" method="POST" class="d-inline">
-                                                    <button type="submit" name="delete_student" value="<?= $student['id']; ?>"
+                                                    <button type="submit" name="delete_product" value="<?= $product['id']; ?>"
                                                         class="btn btn-danger btn-sm">Delete</button>
                                                 </form>
                                             </td>
