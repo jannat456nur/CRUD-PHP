@@ -4,7 +4,8 @@ session_start();
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +15,9 @@ session_start();
 
     <title>Student Create</title>
 </head>
+
 <body>
-  
+
     <div class="container mt-5">
 
         <?php include('message.php'); ?>
@@ -24,7 +26,7 @@ session_start();
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student Add 
+                        <h4>Student Add
                             <a href="index.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
@@ -60,4 +62,5 @@ session_start();
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
